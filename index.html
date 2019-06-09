@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kek</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="doorstuck">
+		<img src="door.png" style="width: 400px; height: 800px;" class="door">
+		<img src="door2.png" style="width: 400px; height: 800px;">
+		<img src="door3.png" style="width: 400px; height: 800px;">
+	</div>
+	<div style="background-image: url(bg.jpg); height: 950px; background-size: 100% 100%; display: none;" class="bg">
+		<h1 class="text-white">Помоги Гарри Поттеру найти его метлу, плащи и палочку! Надо заработать 3 очка!</h1>
+		<h1 class="text-white count_text">0</h1>
+		<button class="btn btn-success">
+		<a href="index.html" class="text-white">Выйти из игры</a>
+	</button>
+		<div class="mt-0">
+			<img src="ring.png" style="width: 50px; position: absolute; margin-left: 500px;">
+			<img src="gun.png" style="width: 100px; position: absolute; margin-left: 1500px; margin-top: 80px;">
+			<img src="metla.png" style="width: 100px; position: absolute; margin-left: 580px; margin-top: 640px;" class="metla">
+			<img src="palochka.png" style="width: 100px; position: absolute;  margin-left: 1375px; margin-top: 35px;" class="palochka">
+			<img src="mantiya.png" style="width: 100px; position: absolute; margin-top: 655px; margin-left: 1334px;" class="mantiya">
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript">
+		let count = 0;
+		document.querySelector(".door").onclick = function(){
+			alert("Вы попали в Хогвартс!")
+			document.querySelector(".bg").style.display = "block";
+			document.querySelector(".doorstuck").style.display = "none";
+		}
+		document.querySelector(".palochka").onclick = function(){
+			document.querySelector(".palochka").style.display = "none";
+			count = count +1;
+			document.querySelector(".count_text").innerHTML = count;
+		}
+		document.querySelector(".mantiya").onclick = function(){
+			document.querySelector(".mantiya").style.display = "none";
+			count = count +1;
+			document.querySelector(".count_text").innerHTML = count;
+		}
+		document.querySelector(".metla").onclick = function(){
+			document.querySelector(".metla").style.display = "none";
+			count = count +1;
+			document.querySelector(".count_text").innerHTML = count;
+		}
+	</script>
+	
+</body>
+</html>
